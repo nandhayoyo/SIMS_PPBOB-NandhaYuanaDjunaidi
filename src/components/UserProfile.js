@@ -15,10 +15,8 @@ const UserProfile = () => {
   const cookies = parseCookies();
 
   useEffect(() => {
-    if (userStatus === "idle" ) {
+    if (userStatus === "idle") {
       dispatch(fetchUser());
-      console.log("masukk", cookies.token);
-      console.log("statuss", userStatus);
     }
   }, [userStatus, dispatch, cookies.token]);
 

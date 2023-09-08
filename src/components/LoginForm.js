@@ -56,7 +56,6 @@ const RegistForm = ({ onLogin, onClose }) => {
 
     try {
       const res = await dispatch(userLogin(data));
-      console.log("ress", res);
     } catch (error) {
       toast.error("Terjadi kesalahan. Silakan coba lagi.");
     } finally {

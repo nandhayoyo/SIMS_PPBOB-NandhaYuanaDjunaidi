@@ -10,24 +10,28 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUser, getUser } from "../store/slice/userSlice";
 import Service from "../components/Service";
 import Banner from "../components/Banner";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const user = useSelector(getUser);
-  const userStatus = useSelector((state) => state.user.status);
-  const userError = useSelector((state) => state.user.error);
+  // const user = useSelector(getUser);
+  // const userStatus = useSelector((state) => state.user.status);
+  // const userError = useSelector((state) => state.user.error);
+  const cookies = parseCookies();
+  const navigate = useNavigate();
 
   // const [showService, setShowService] = useState(true);
-
   useEffect(() => {
-    if (userStatus === "idle") {
-      dispatch(fetchUser());
+    if (!cookies.token) {
+      navigate("/");
     }
-  }, [userStatus, dispatch]);
+  }, []);
 
-  // const handleServiceClick = () => {
-  //   setShowService(false);
-  // };
+  // useEffect(() => {
+  //   if (userStatus === "idle") {
+  //     dispatch(fetchUser());
+  //   }
+  // }, [userStatus, dispatch]);
 
   return (
     <>

@@ -15,7 +15,8 @@ const initialState = {
 
 export const userLogin = createAsyncThunk("user/login", async (data) => {
   const res = await _postLogin(data.email, data.password);
-  nookies.set(undefined, "token", res.data.token, { path: "/" });
+  const token = await res.data.token;
+  nookies.set(undefined, "token", token, { path: "/" });
 
   return res;
 });

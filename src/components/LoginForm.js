@@ -8,6 +8,7 @@ import { toast } from "react-hot-toast";
 import nookies from "nookies";
 import { useDispatch, useSelector } from "react-redux";
 import { statusReset, userLogin } from "../store/slice/loginSlice";
+import { fetchUser } from "../store/slice/userSlice";
 
 const RegistForm = ({ onLogin, onClose }) => {
   const dispatch = useDispatch();
@@ -24,8 +25,8 @@ const RegistForm = ({ onLogin, onClose }) => {
         duration: 1000,
       });
 
-      setError("");
       navigate("/home");
+      window.location.href = "/home";
     } else if (loginStatus === "failed") {
       toast.error("Login gagal!", {
         duration: 1000,
@@ -54,7 +55,8 @@ const RegistForm = ({ onLogin, onClose }) => {
     };
 
     try {
-      await dispatch(userLogin(data));
+      const res = await dispatch(userLogin(data));
+      console.log("ress", res);
     } catch (error) {
       toast.error("Terjadi kesalahan. Silakan coba lagi.");
     } finally {

@@ -9,7 +9,7 @@ import { fetchUser, getUser, updateUser } from "../store/slice/userSlice";
 import { toast } from "react-hot-toast";
 import { ProfileService } from "../services/Profile";
 import { useNavigate } from "react-router-dom";
-// import { destroy } from "nookies";
+import { destroyCookie } from "nookies";
 
 const Akun = () => {
   const { putProfile, putProfileImage } = ProfileService();
@@ -98,6 +98,7 @@ const Akun = () => {
 
   const handleLogoutClick = () => {
     // destroy(null, "token");
+    destroyCookie(null, "token");
     navigate("/");
   };
   return (

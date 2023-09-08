@@ -85,8 +85,10 @@ const Akun = () => {
     };
 
     try {
+      if (imagePreviewURL) {
+        await putProfileImage(file);
+      }
       await putProfile(firstName, lastName);
-      await putProfileImage(file);
       toast.success("Profile berhasil di update!");
       dispatch(updateUser());
     } catch (error) {

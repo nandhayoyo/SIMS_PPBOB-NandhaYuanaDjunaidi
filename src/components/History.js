@@ -59,7 +59,6 @@ const History = () => {
     setMore(more + LIMIT_HISTORY);
   };
 
-
   return (
     <div className="container">
       <h5>Semua Transaksi</h5>
@@ -85,7 +84,7 @@ const History = () => {
         </div>
       ))}
 
-      {historyStatus === "succeeded" && (
+      {historyData.records.length >= LIMIT_HISTORY && (
         <button className="button-history" onClick={handleShowMoreClick}>
           Show More
         </button>

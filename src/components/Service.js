@@ -9,8 +9,6 @@ const Service = ({ onClick }) => {
   const data = useSelector(getServices);
   const servicesStatus = useSelector((state) => state.service.status);
 
-  console.log("servicessssss",data)
-
   useEffect(() => {
     if (servicesStatus === "idle") {
       dispatch(fetchServices());

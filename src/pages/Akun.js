@@ -75,9 +75,6 @@ const Akun = () => {
     reader.readAsDataURL(file);
   };
 
-  console.log("imagggggge", imagePreviewURL);
-  console.log("FILEEEEEE", file);
-
   const handleSaveClick = async (e) => {
     setIsEditing(false);
     e.preventDefault();

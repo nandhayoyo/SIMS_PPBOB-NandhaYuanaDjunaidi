@@ -10,8 +10,6 @@ const Saldo = () => {
   const saldoStatus = useSelector((state) => state.saldo.status);
   const saldoError = useSelector((state) => state.saldo.error);
 
-  console.log("saldo :", saldo);
-
   const [showBalance, setShowBalance] = useState(false);
 
   useEffect(() => {

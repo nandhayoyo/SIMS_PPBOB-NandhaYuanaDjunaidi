@@ -16,7 +16,6 @@ import { ProfileService } from "../services/Profile";
 const Service = () => {
   const { postTransaction } = ProfileService();
   const { id } = useParams();
-  console.log("id nic", id);
   const dispatch = useDispatch();
   const services = useSelector(getServices);
   const saldo = useSelector(getSaldo);
@@ -32,8 +31,6 @@ const Service = () => {
     (serpis) => serpis.service_code.toLowerCase() === id
   )[0];
 
-  console.log("serpis : ", saldo);
-
   const handlePayment = async () => {
     if (saldo.data.balance < selectedService.service_tariff) {
       toast.error("saldo tidak cukup");
@@ -44,7 +41,6 @@ const Service = () => {
       dispatch(fetchBalance());
 
       toast.success(res.message);
-      console.log("ressss", res);
     } catch (error) {
       toast.error("Something went wrong");
     }

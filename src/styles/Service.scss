@@ -1,0 +1,73 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 0px solid #ccc;
+  padding: 20px;
+  width: fit-content;
+}
+
+.slider-banner {
+  margin-left: 20px;
+}
+
+.service-name {
+  margin: 0px !important;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.card-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.service-slider {
+  display: flex;
+  gap: 10px;
+  scroll-snap-type: x mandatory;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+.service-card {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px;
+  height: auto;
+  border: 0px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-image {
+  width: 80px;
+  padding: 15px;
+  height: auto;
+  margin-bottom: 10px;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.service-name {
+  margin: 0;
+}

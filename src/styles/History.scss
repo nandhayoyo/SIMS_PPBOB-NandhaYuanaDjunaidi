@@ -1,0 +1,47 @@
+.history-card {
+  background-color: white;
+  border-radius: 8px;
+  border: 0.1px solid #dedede;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .col {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    p {
+      color: #808080;
+      margin-right: 40px;
+    }
+  }
+}
+.positive {
+  color: #78baa2;
+}
+.negative {
+  color: #ee654f;
+}
+
+.button-history {
+  background-color: white; // Warna latar belakang tombol
+  color: red; // Warna teks tombol (merah)
+  border: none; // Menghapus batas tombol
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center; // Membuat tombol berada di tengah
+  width: 100%; // Lebar tombol 100% dari container
+  margin-top: 10px;
+  margin-bottom: 50px;
+}

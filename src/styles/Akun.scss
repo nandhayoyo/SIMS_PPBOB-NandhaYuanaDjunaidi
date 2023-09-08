@@ -1,0 +1,112 @@
+.akun-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pp-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.profile_picture-akun {
+  width: 180px;
+  position: relative;
+  z-index: 1;
+}
+
+.edit-icon {
+  display: flex;
+  border: 1px solid black;
+  margin-top: -50px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  left: 50px;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.form-edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputtext-edit {
+  width: 700px;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.inputtext-edit::placeholder {
+  opacity: 1;
+  color: #535353;
+  font-size: 16px;
+  margin-left: 20px;
+  padding-left: 10px; /* Atur padding kiri */
+}
+
+
+
+.button-edit {
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+
+  .button-edit:hover {
+    /* Set semua properti yang ingin diubah saat tombol dihover menjadi nilai awal */
+    background-color: white; /* Background color saat dihover */
+    color: red; /* Warna teks saat dihover */
+    border: 2px solid red; /* Border saat dihover */
+    /* Anda bisa menambahkan properti lain yang ingin diubah saat dihover di sini */
+  }
+}
+
+.button-logout {
+  margin-top: 20px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  border: 0px solid red;
+}
+
+.button-cancel {
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+
+  .button-edit:hover {
+    /* Set semua properti yang ingin diubah saat tombol dihover menjadi nilai awal */
+    background-color: white; /* Background color saat dihover */
+    color: red; /* Warna teks saat dihover */
+    border: 2px solid red; /* Border saat dihover */
+    /* Anda bisa menambahkan properti lain yang ingin diubah saat dihover di sini */
+  }
+}
+
+.edit-text {
+  font-size: 14px;
+  margin-top: 20px;
+}

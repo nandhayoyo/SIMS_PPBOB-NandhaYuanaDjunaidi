@@ -1,0 +1,22 @@
+/* Banner.scss */
+
+.banner-container {
+  position: relative; /* Memastikan elemen .slick-track memiliki posisi yang relatif terhadap komponen Banner */
+  width: 100%; /* Memastikan bahwa komponen Banner memiliki lebar 100% */
+  max-width: 1200px; /* Atur lebar maksimum sesuai kebutuhan */
+  margin: 0 auto; /* Membuat komponen Banner berada di tengah halaman jika diperlukan */
+  padding: 20px; /* Atur jarak antara komponen Banner dan kontennya */
+}
+
+.slick-track {
+  display: flex !important; /* Menggunakan flexbox agar elemen .slick-track menjadi anak dari .banner-container */
+}
+
+.slick-slide {
+  display: flex !important; /* Menggunakan flexbox agar elemen .slick-slide menjadi anak dari .slick-track */
+  justify-content: center; /* Mengaturnya agar elemen dalam slider berada di tengah */
+}
+
+.banner-slider{
+  height: auto;
+}

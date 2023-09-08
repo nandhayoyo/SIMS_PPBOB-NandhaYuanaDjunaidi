@@ -1,0 +1,59 @@
+.userProfile-container {
+  .profile_picture {
+  }
+
+  h5 {
+    padding-top: 20px;
+  }
+
+  h3 {
+    margin-top: 20 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .userProfile-container {
+    padding: 1px;
+    flex-direction: column;
+    width: 99vw;
+    justify-content: center;
+    align-items: center;
+
+    .userProfile-row {
+      flex-direction: column;
+    }
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px !important;
+    }
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      text-align: justify;
+    }
+    img {
+      display: none;
+    }
+  }
+
+  .userProfileimg {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .userProfile-row-reverse {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+}

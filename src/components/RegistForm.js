@@ -3,6 +3,7 @@ import "../styles/LoginForm.scss";
 import RegistImg from "../assets/images/IllustrasiLogin.png";
 import logo from "../assets/images/Logo.png";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 const RegistForm = () => {
   const [email, setEmail] = useState("");
@@ -18,12 +19,12 @@ const RegistForm = () => {
 
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     if (!emailRegex.test(email)) {
-      setError("Format email tidak valid");
+      toast.error("Format email tidak valid");
       return;
     }
 
     if (password.length < 8) {
-      setError("Password harus memiliki panjang minimal 8 karakter");
+      toast.error("Password harus memiliki panjang minimal 8 karakter");
       return;
     }
 
@@ -35,7 +36,6 @@ const RegistForm = () => {
     };
 
     try {
-      // Mengirim permintaan POST ke API registration
       const response = await fetch(
         "https://take-home-test-api.nutech-integrasi.app/registration",
         {
@@ -48,16 +48,14 @@ const RegistForm = () => {
       );
 
       if (response.ok) {
-        console.log("Registrasi berhasil!");
+        toast.success("Registrasi berhasil!");
         setError("");
         navigate("/loginForm");
       } else {
-        console.error("Registrasi gagal!");
-        setError("Registrasi gagal. Silakan coba lagi.");
+        toast.error("Registrasi gagal. Silakan coba lagi.");
       }
     } catch (error) {
-      console.error("Terjadi kesalahan:", error);
-      setError("Terjadi kesalahan. Silakan coba lagi.");
+      toast.error("Terjadi kesalahan:", error);
     }
   };
 

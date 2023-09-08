@@ -5,7 +5,7 @@ import profile_picture from "../assets/images/Profile Photo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
-import { getUser, updateUser } from "../store/slice/userSlice";
+import { fetchUser, getUser, updateUser } from "../store/slice/userSlice";
 import { toast } from "react-hot-toast";
 import { ProfileService } from "../services/Profile";
 import { useNavigate } from "react-router-dom";
@@ -25,6 +25,15 @@ const Akun = () => {
   const [imagePreviewURL, setImagePreviewURL] = useState("");
 
   // const profile = useSelector((state) => state.user.data);
+  const user = useSelector(getUser);
+  const userStatus = useSelector((state) => state.user.status);
+  const userError = useSelector((state) => state.user.error);
+
+  useEffect(() => {
+    if (userStatus === "idle") {
+      dispatch(fetchUser());
+    }
+  }, [userStatus, dispatch]);
 
   useEffect(() => {
     if (profile.data) {

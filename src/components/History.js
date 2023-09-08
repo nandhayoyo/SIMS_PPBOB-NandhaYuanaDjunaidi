@@ -56,11 +56,9 @@ const History = () => {
   };
 
   const handleShowMoreClick = () => {
-    // dispatch(incrementOffset());
     setMore(more + LIMIT_HISTORY);
   };
 
-  console.log("HISTORRRY ", historyData);
 
   return (
     <div className="container">

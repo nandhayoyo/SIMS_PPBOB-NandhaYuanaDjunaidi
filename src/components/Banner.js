@@ -9,8 +9,6 @@ const Banner = () => {
   const banners = useSelector(selectBanners);
   const bannersStatus = useSelector((state) => state.banners.status);
 
-  console.log("bannnnerrrr ?? ", banners);
-
   const settings = {
     dots: true,
     infinite: true,

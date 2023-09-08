@@ -39,12 +39,12 @@ const RegistForm = ({ onLogin, onClose }) => {
 
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     if (!emailRegex.test(email)) {
-      setError("Format email tidak valid");
+      toast.error("Format email tidak valid");
       return;
     }
 
     if (password.length < 8) {
-      setError("Password harus memiliki panjang minimal 8 karakter");
+      toast.error("Password harus memiliki panjang minimal 8 karakter");
       return;
     }
 
@@ -54,16 +54,12 @@ const RegistForm = ({ onLogin, onClose }) => {
     };
 
     try {
-      console.log("data login form : ", data);
       await dispatch(userLogin(data));
     } catch (error) {
-      console.error("Terjadi kesalahan:", error);
-      setError("Terjadi kesalahan. Silakan coba lagi.");
+      toast.error("Terjadi kesalahan. Silakan coba lagi.");
     } finally {
       dispatch(statusReset());
     }
-
-    console.log("loginstatus di loginform ::: ", loginStatus);
   };
 
   return (

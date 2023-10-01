@@ -33,7 +33,6 @@ const Saldo = () => {
           <p className="saldo-title">Saldo anda</p>
           <div className="nominal-saldo">
             <h2 className="h2-spasi">Rp {saldoText}</h2>
-            {/* <h2 className="h2-polos"></h2> */}
           </div>
           <p className="lihat-saldo" onClick={handleLihatSaldoClick}>
             Lihat saldo

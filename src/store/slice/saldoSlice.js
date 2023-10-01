@@ -19,9 +19,6 @@ const saldoSlice = createSlice({
   name: "saldo",
   initialState,
   reducers: {
-    // updateBalance(state, action) {
-      
-    // },
   },
   extraReducers: {
     [fetchBalance.pending]: (state) => {

@@ -14,6 +14,8 @@ const NominalTopup = () => {
     setInputValue(e.target.value);
   };
 
+  const valueRp = inputValue.toLocaleString("id-ID");
+
   const handleTopUp = async () => {
     if (inputValue < MIN_TOPUP) {
       toast.error("Minimum Top Up Rp 10.000");
@@ -44,7 +46,7 @@ const NominalTopup = () => {
                 className="form-control "
                 type="number"
                 placeholder="masukan nominal Top Up"
-                value={inputValue}
+                value={valueRp}
                 onChange={handleInputChange}
               />
               <button
@@ -71,7 +73,7 @@ const NominalTopup = () => {
             </button>
             <button
               className=" button-nominal"
-              onClick={() => setInputValue(10000)}
+              onClick={() => setInputValue(50000)}
             >
               Rp 50.000
             </button>

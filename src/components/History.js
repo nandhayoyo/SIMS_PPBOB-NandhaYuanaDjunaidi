@@ -15,6 +15,7 @@ const History = () => {
   const [more, setMore] = useState(0);
 
   const dispatch = useDispatch();
+  // const historyData2 = useSelector(getHistory());
   const historyData = useSelector((state) => state.history.data);
   const historyStatus = useSelector((state) => state.history.status);
 

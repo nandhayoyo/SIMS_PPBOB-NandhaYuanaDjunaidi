@@ -10,6 +10,7 @@ import TopUp from "./pages/Topup";
 import Transaction from "./pages/Transaction";
 import Akun from "./pages/Akun";
 import Service from "./pages/Service";
+import Test from "./pages/Test";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/transaction" element={<Transaction />} />
         <Route path="/akun" element={<Akun />} />
         <Route path="/service/:id" element={<Service />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
       <Toaster />
     </Router>

@@ -45,6 +45,20 @@ const historySlice = createSlice({
         state.error = action.error.message;
       });
   },
+
+  // extraReducers: {
+  //   [fetchHistory.pending]: (state) => {
+  //     state.status = "loading";
+  //   },
+  //   [fetchHistory.fulfilled]: (state, action) => {
+  //     state.status = "succeeded";
+  //     state.data = action.payload;
+  //   },
+  //   [fetchHistory.rejected]: (state, action) => {
+  //     state.status = "failed";
+  //     state.error = action.error.message;
+  //   },
+  // },
 });
 
 export const { incrementOffset } = historySlice.actions;
